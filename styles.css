@@ -188,7 +188,7 @@ html, body {
 }
 
 .promo {
-    background: url('TestTask/assets/images/MainImage.png') no-repeat right center;
+    background: url('assets/images/MainImage.png') no-repeat right center;
     background-size: cover;
     min-height: 300px;
     display: flex;
