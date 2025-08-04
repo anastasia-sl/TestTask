@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLAPS VIP Rakeback</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@900&display=swap" rel="stylesheet">
@@ -84,10 +85,10 @@
                     <div class="rate-card rate-card-back">
                         <div class="rate-card-back-header">0.5 %</div>
                         <div class="rate-card-back-desc">
-                            <span class="bold">0.5% rakeback</span> is credited if<br/>
-                            the player's total sum of<br/>
-                            casino bets during last <span class="bold">7 days<br/>
-                            is more</span> than <span class="bold">15000 EUR</span> or<br/>
+                            <span class="bold">0.5% rakeback</span> is credited if
+                            the player's total sum of
+                            casino bets during last <span class="bold">7 days
+                            is more</span> than <span class="bold">15000 EUR</span> or
                             equivalent
                         </div>
                     </div>
@@ -103,10 +104,10 @@
                     <div class="rate-card rate-card-back">
                         <div class="rate-card-back-header">0.7 %</div>
                         <div class="rate-card-back-desc">
-                            <span class="bold">0.7% rakeback</span> is credited if<br/>
-                            the player's total sum of<br/>
-                            casino bets during last <span class="bold">7 days<br/>
-                            is more</span> than <span class="bold">30000 EUR</span> or<br/>
+                            <span class="bold">0.7% rakeback</span> is credited if
+                            the player's total sum of
+                            casino bets during last <span class="bold">7 days
+                            is more</span> than <span class="bold">30000 EUR</span> or
                             equivalent
                         </div>
                     </div>
@@ -122,9 +123,9 @@
                     <div class="rate-card rate-card-back">
                         <div class="rate-card-back-header">1 %</div>
                         <div class="rate-card-back-desc">
-                            <span class="bold">1% rakeback</span> is credited if<br/>
-                            the player's total sum of<br/>
-                            casino bets during last <span class="bold">7 days<br/>
+                            <span class="bold">1% rakeback</span> is credited if
+                            the player's total sum of
+                            casino bets during last <span class="bold">7 days
                             is more</span> than <span class="bold">50000 EUR</span> or
                             equivalent
                         </div>
@@ -162,7 +163,7 @@
 <footer class="footer">
     <div class="footer-top">
         <div class="footer-cols">
-            <div class="footer-col">
+            <div class="footer-col casino-col">
                 <div class="footer-title">Casino</div>
                 <a href="#">Casino Games</a>
                 <a href="#">Top Slots</a>
@@ -178,7 +179,7 @@
                 <a href="#">Terms of Use</a>
                 <a href="#">Help Center</a>
             </div>
-            <div class="footer-col">
+            <div class="footer-col casino-col">
                 <div class="footer-title">Currencies</div>
                 <a href="#">Bitcoin</a>
                 <a href="#">USDT</a>
@@ -192,6 +193,7 @@
                 <a href="#">Español</a>
                 <a href="#">Français</a>
             </div>
+
             <div class="footer-col">
                 <div class="footer-title">Supported coins</div>
                 <div class="footer-icons-row">
@@ -208,11 +210,11 @@
                     <div class="footer-title footer-title-contact">Contact us</div>
                     <div class="footer-contact">
                         <img src="assets/images/Email.png" alt="Email">
-                        <a href="mailto:support@claps.com">support@claps.com</a>
+                        <a href="mailto:support@claps.com" class="email-link">support@claps.com</a>
                     </div>
                 </div>
             </div>
-            <div class="footer-col">
+            <div class="footer-col casino-col">
                 <div class="footer-title">Join our community</div>
                 <div class="footer-socials-row">
                     <div class="socials-row">
@@ -227,7 +229,7 @@
                         <img src="assets/images/Telegram.png" alt="Telegram">
                     </div>
                 </div>
-                <div class="contact-links">
+                <div class="contact-links footer-btc-col">
                     <div class="footer-title footer-title-btc">Bitcoin price</div>
                     <div class="footer-contact">
                         <img src="assets/images/FooterBtc.png" alt="BTC">
@@ -236,10 +238,6 @@
                 </div>
 
             </div>
-        </div>
-        <div class="second-footer-col">
-
-
         </div>
     </div>
     <div class="footer-bottom">
@@ -252,6 +250,31 @@
         </div>
     </div>
 </footer>
+
+<nav class="mobile-bottom-nav">
+    <a href="#" class="mobile-bottom-nav__item">
+        <img src="assets/images/BurgerMenu.png" alt="Menu" class="mobile-bottom-nav__icon" />
+        <span class="mobile-bottom-nav__label">Menu</span>
+    </a>
+    <a href="#" class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__icon-bg">
+            <img src="assets/images/CasinoIcon.png" alt="Casino" class="mobile-bottom-nav__icon" />
+        </div>
+        <span class="mobile-bottom-nav__label">Casino</span>
+    </a>
+    <a href="#" class="mobile-bottom-nav__item">
+        <img src="assets/images/SportIcon.png" alt="Sport" class="mobile-bottom-nav__icon" />
+        <span class="mobile-bottom-nav__label">Sport</span>
+    </a>
+    <a href="#" class="mobile-bottom-nav__item">
+        <img src="assets/images/PromWhiteIcon.png" alt="Promotions" class="mobile-bottom-nav__icon" />
+        <span class="mobile-bottom-nav__label">Promotions</span>
+    </a>
+    <a href="#" class="mobile-bottom-nav__item">
+        <img src="assets/images/ProfileIcon.png" alt="Account" class="mobile-bottom-nav__icon" />
+        <span class="mobile-bottom-nav__label">Account</span>
+    </a>
+</nav>
 
 <script src="flip.js" defer></script>
 </body>

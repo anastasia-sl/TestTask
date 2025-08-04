@@ -26,3 +26,16 @@ document.getElementById('termsToggle').addEventListener('click', function() {
         icon.src = 'assets/images/PlusIcon.png';
     }
 });
+
+document.querySelectorAll('.mobile-bottom-nav__item').forEach(function(item) {
+    item.addEventListener('click', function(e) {
+        // убираем класс active у всех
+        document.querySelectorAll('.mobile-bottom-nav__item').forEach(function(el) {
+            el.classList.remove('mobile-bottom-nav__item--active', 'active');
+        });
+        // ставим только на выбранный
+        item.classList.add('mobile-bottom-nav__item--active', 'active');
+        // если ссылка #, отменить переход
+        if (item.getAttribute('href') === '#') e.preventDefault();
+    });
+});

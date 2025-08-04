@@ -3,7 +3,6 @@ body {
     background: #14141A;
     color: #fff;
     font-family: 'Sofia Sans Condensed', Arial, sans-serif;
-    overflow-x: hidden;
 }
 
 html, body {
@@ -218,7 +217,7 @@ html, body {
 .promo {
     background: url('assets/images/MainImage.png') no-repeat right center;
     background-size: cover;
-    min-height: 242px;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -234,7 +233,11 @@ html, body {
     margin: 34px 0;
 }
 
-main {
+.mobileBanner{
+    display: none;
+}
+
+main{
     padding: 20px 16px 104px 16px;
 }
 
@@ -318,8 +321,7 @@ main {
 .rate-card-value {
     background: #181921;
     border-radius: 8px;
-    max-width:210px;
-    width:210px;
+    width: 188px;
     height: 94px;
     display: flex;
     align-items: center;
@@ -442,6 +444,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: flex-end;
     max-width: 1142px;
 }
 
@@ -473,7 +476,7 @@ main {
     align-items: center;
     justify-content: space-between;
     background:
-            /*linear-gradient(0deg, var(--working-suit, #181921), var(--working-suit, #181921)),*/
+        /*linear-gradient(0deg, var(--working-suit, #181921), var(--working-suit, #181921)),*/
             linear-gradient(145.76deg, rgba(59, 52, 80, 0.04) 4%, rgba(255, 255, 255, 0.08) 20%, rgba(59, 52, 80, 0.04) 40%, rgba(59, 52, 80, 0.04) 70%, rgba(255, 255, 255, 0.08) 90%, rgba(59, 52, 80, 0.04) 100%);
     border-radius: 12px;
     box-shadow: inset 0 0 20px 2px rgba(255, 255, 255, 0.2);
@@ -521,8 +524,8 @@ main {
 }
 
 .plus {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #E5FF3A;
     display: flex;
@@ -551,7 +554,7 @@ main {
 
 .terms-block.expanded {
     background:
-            /*linear-gradient(0deg, var(--working-suit, #181921), var(--working-suit, #181921)),*/
+        /*linear-gradient(0deg, var(--working-suit, #181921), var(--working-suit, #181921)),*/
             linear-gradient(145.76deg, rgba(59, 52, 80, 0.04) 4%, rgba(255, 255, 255, 0.08) 20%, rgba(59, 52, 80, 0.04) 40%, rgba(59, 52, 80, 0.04) 70%, rgba(255, 255, 255, 0.08) 90%, rgba(59, 52, 80, 0.04) 100%);
     box-shadow: inset 0 0 20px 2px rgba(255, 255, 255, 0.2);
     border-radius: 20px;
@@ -610,13 +613,19 @@ main {
 }
 
 .footer-top {
-    padding: 0 48px;
+    padding: 0 32px;
+}
+
+.bottom-cols{
+    display: flex;
+    gap: 75px;
 }
 
 .footer-cols {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
+    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -642,7 +651,6 @@ main {
     font-family: 'Sofia Sans', Arial, sans-serif;
     font-weight: 700;
     font-size: 14px;
-    line-height: 100%;
     margin-bottom: 4px;
 }
 
@@ -737,47 +745,11 @@ main {
     font-weight: 400;
 }
 
-@media (max-width: 900px) {
-    .footer-cols {
-        flex-wrap: wrap;
-        gap: 24px;
-    }
-    .footer-top {
-        padding: 32px 16px 0 16px;
-    }
-    .footer-bottom {
-        padding: 16px;
-    }
-}
 
-@media (max-width: 800px) {
-    .promo { flex-direction: column; align-items: flex-start; padding: 22px; }
-    .promo-img { width: 60vw; margin: 30px 0 0 0; }
-    .rates { flex-direction: column; gap: 20px; align-items: center; }
-    .footer-links { flex-direction: column; gap: 20px; }
-}
 
-@media (hover: none) and (pointer: coarse) {
-    .rate-card-flip {
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 1440px) {
+@media (max-width: 1300px) {
     .topbar__logo {
-        margin-right: 100px;
-    }
-    .topbar__right {
-        margin-left: 100px;
-    }
-    .topbar__nav {
-        gap: 30px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .topbar__logo {
-        margin-right: 24px;
+        margin-right: 60px;
     }
     .topbar__right {
         margin-left: 60px;
@@ -794,7 +766,27 @@ main {
     }
 }
 
+
+
+/* Планшеты (до 992px) */
 @media (max-width: 992px) {
+    .topbar {
+        padding: 0 16px;
+        background: #181921;
+        justify-content: space-between;
+    }
+
+    main {
+        padding: 24px 24px 0 24px;
+    }
+
+    .topbar__auth-btn {
+        font-size: 14px;
+        padding: 6px 8px;
+        height: 40px;
+        font-weight: 700;
+    }
+
     .topbar__nav,
     .topbar__right {
         display: none;
@@ -802,56 +794,359 @@ main {
 
     .topbar__mobile-auth {
         display: flex;
-        align-items: center;
+        gap: 8px;
     }
 
     .topbar__logo {
         margin-right: auto;
+        height: 16px;
     }
 
-    .topbar{
-        background: #181921;
+    .promo {
+        padding: 39px;
+        background-size: cover;
     }
 
-    main{
-        padding:0 24px;
-    }
-
-    .promo{
-        background: url('assets/images/MainImage.png') no-repeat center;
-    }
-}
-
-@media (max-width: 768px) {
     .promo-title {
-        font-size: 34px;
+        font-size: 46px;
+    }
+
+    .promo-info{
+        padding-left: 64px;
     }
 
     .promo-desc {
-        font-size: 10px;
+        font-size: 16px;
     }
 
     .rates {
         flex-direction: column;
+        align-items: center;
+        gap: 32px;
     }
+
+    .rate-card-flip, .rate-card {
+        width: 392px;
+        height: 270px;
+    }
+
+    .rate-card-value{
+        width: 213px;
+        height: 94px;
+    }
+
+    .rakeback-title {
+        font-size: 32px;
+        margin: 64px 0 24px;
+        line-height: 40px;
+    }
+
+    .rakeback {
+        padding-bottom: 270px;
+    }
+
+    .rate-card-back-desc{
+        font-weight: 600;
+        padding: 24px 36px;
+    }
+
+    .terms-bar-img{
+        width: 392px;
+        top: -152px;
+    }
+
+    .terms-section {
+        flex-direction: row;
+    }
+
+    .btn-terms {
+        padding: 0 24px;
+        height: 72px;
+    }
+
+    .terms-text {
+        font-size: 20px;
+    }
+
+    .terms-content ul {
+        font-size: 16px;
+    }
+
+    .list-icon{
+        width: 12px;
+        height: 12px;
+    }
+
+    .terms-block.expanded .terms-content{
+        padding: 0 24px;
+    }
+
+    .terms-content li{
+        margin-bottom: 20px;
+    }
+
+    .footer-cols {
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: flex-start;
+    }
+
+    .footer-top {
+        padding: 88px 16px 16px;
+    }
+
+    .footer-col {
+        width: 32%;
+        margin-bottom: 0;
+    }
+
+    .casino-col{
+        padding-left: 41px;
+    }
+
+    .footer-btc-col{
+        padding-left: 70px;
+        width:100%;
+    }
+
+    .footer-contact span{
+        font-size: 10px;
+    }
+
+    .email-link{
+        font-size: 10px !important;
+    }
+
+    .footer-contact{
+        width: 123px;
+    }
+
+    .footer-bottom{
+        padding: 16px 56px 109px;
+    }
+
+    .footer-18plus{
+        margin-bottom: 8px;
+    }
+
+    .mobile-bottom-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        left: 0; right: 0; bottom: 0;
+        height: 60px;
+        background: #181921;
+        z-index: 1000;
+        box-shadow: 0 -4px 24px #0004;
+        border-radius: 20px 20px 0 0;
+        padding: 0 8px;
+    }
+
+    .mobile-bottom-nav__item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Sofia Sans', Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        height: 100%;
+        position: relative;
+        transition: color 0.2s;
+        min-width: 54px;
+        gap: 4px;
+    }
+
+    .mobile-bottom-nav__icon {
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .mobile-bottom-nav__label {
+        font-size: 10px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1;
+        text-align: center;
+    }
+
+    /* ACTIVE */
+    .mobile-bottom-nav__item--active .mobile-bottom-nav__icon-bg {
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 74px;
+        /*height: 60px;*/
+        margin-bottom: 4px;
+    }
+    .mobile-bottom-nav__item--active .mobile-bottom-nav__icon {
+        filter: brightness(1.5) drop-shadow(0 0 0 #E5FF3A);
+        background-color: #3A3451;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+    .mobile-bottom-nav__item--active .mobile-bottom-nav__label--active {
+        color: #E5FF3A;
+        font-weight: 700;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .mobile-bottom-nav__item--active .mobile-bottom-nav__label,
+    .mobile-bottom-nav__item.active .mobile-bottom-nav__label {
+        color: #E5FF3A;
+    }
+
+    .mobile-bottom-nav__item--active .mobile-bottom-nav__icon,
+    .mobile-bottom-nav__item.active .mobile-bottom-nav__icon {
+        filter: brightness(1.25) drop-shadow(0 2px 8px #E5FF3A50);
+    }
+
+    .mobile-bottom-nav__item--active,
+    .mobile-bottom-nav__item.active {
+        background-color: #3A3451;
+        border-radius: 4px;
+    }
+
 }
 
-@media (max-width: 576px) {
-    .topbar {
-        height: 56px;
-        padding: 0 12px;
-    }
-
-    .topbar__logo {
-        height: 14px;
-    }
-
-    .topbar__auth-btn {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-
-    .promo{
+/* Скрыть на десктопе */
+@media (min-width: 992px) {
+    .mobile-bottom-nav {
         display: none !important;
     }
 }
+
+@media (max-width: 916px) {
+    .promo {
+        background: url('assets/images/FrontMobileBanner1.png') no-repeat center;
+        padding: 39px;
+        background-size: cover;
+        min-height: 400px;
+    }
+
+    .promo-title {
+        display: none;
+    }
+
+    .promo-desc {
+        display: none;
+    }
+}
+
+@media (max-width: 825px) {
+    .promo {
+        min-height: 354px;
+    }
+
+    /*.footer-cols {*/
+    /*    flex-wrap: wrap;*/
+    /*}*/
+}
+
+@media (max-width: 746px) {
+    .promo {
+        min-height: 315px;
+    }
+
+
+}
+
+@media (max-width: 667px) {
+    .promo {
+        min-height: 284px;
+    }
+}
+
+/* Мобильные устройства (до 576px) */
+@media (max-width: 576px) {
+
+
+
+    .promo {
+        min-height: 236px;
+    }
+
+
+}
+
+@media (max-width: 478px) {
+    .promo {
+        min-height: 190px;
+    }
+}
+
+@media (max-width: 400px) {
+    .promo {
+        min-height: 170px;
+    }
+
+    .rate-card-flip, .rate-card {
+        width: 342px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 376px) {
+    .promo {
+        min-height: 120px;
+    }
+    .terms-bar-img{
+        width: 336px;
+        top: -130px;
+    }
+
+    .footer-icons-row{
+        flex-wrap: wrap;
+    }
+
+    .footer-btc-col{
+        padding-left: 0;
+    }
+
+    .second-socials-row{
+        flex-wrap: wrap;
+    }
+
+    .socials-row{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 300px) {
+    .promo {
+        min-height: 90px;
+    }
+}
+
+.rate-card-flip {
+    cursor: pointer;
+}
+
+.terms-block.expanded .btn-terms,
+.btn-terms {
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
