@@ -13,3 +13,16 @@ document.querySelectorAll('.rate-card-flip').forEach(card => {
         });
     }
 });
+
+document.getElementById('termsToggle').addEventListener('click', function() {
+    const termsBlock = document.getElementById('termsBlock');
+    const icon = document.getElementById('termsPlusIcon');
+
+    termsBlock.classList.toggle('expanded');
+
+    if (termsBlock.classList.contains('expanded')) {
+        icon.src = 'assets/images/MinusIcon.png';
+    } else {
+        icon.src = 'assets/images/PlusIcon.png';
+    }
+});
