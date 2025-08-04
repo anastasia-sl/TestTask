@@ -31,7 +31,6 @@ html, body {
     margin-right: 142px;
 }
 
-/* Навигация */
 .topbar__nav {
     display: flex;
     align-items: center;
@@ -75,7 +74,6 @@ html, body {
     margin-left: 142px;
 }
 
-/* Баланс + депозит */
 .topbar__wallet-block {
     display: flex;
     width: 263px;
@@ -85,7 +83,6 @@ html, body {
     border-radius: 6px;
 }
 
-/* Блок баланса */
 .topbar__balance-block {
     display: flex;
     align-items: center;
@@ -117,7 +114,6 @@ html, body {
 .topbar__arrow-down {
 }
 
-/* Кнопка Deposit */
 .topbar__deposit-btn {
     background: #E5FF3A;
     color: #2A2E0A;
@@ -488,14 +484,12 @@ main{
     z-index: 1;
 }
 
-/* Кнопка в открытом состоянии */
 .terms-block.expanded .btn-terms {
     background: transparent;
     box-shadow: none;
     border-radius: 20px;
 }
 
-/* Градиентная рамка для кнопки (только в закрытом состоянии) */
 .btn-terms::before {
     content: "";
     position: absolute;
@@ -514,7 +508,6 @@ main{
     display: none;
 }
 
-/* Остальные стили */
 .terms-text {
     font-family: 'Sofia Sans', Arial, sans-serif;
     font-weight: 900;
@@ -538,7 +531,6 @@ main{
     transition: transform 0.3s ease;
 }
 
-/* Контент */
 .terms-content {
     max-height: 0;
     overflow: hidden;
@@ -768,7 +760,6 @@ main{
 
 
 
-/* Планшеты (до 992px) */
 @media (max-width: 992px) {
     .topbar {
         padding: 0 16px;
@@ -891,10 +882,6 @@ main{
         justify-content: flex-start;
     }
 
-    .footer-top {
-        padding: 88px 16px 16px;
-    }
-
     .footer-col {
         width: 32%;
         margin-bottom: 0;
@@ -975,7 +962,6 @@ main{
         text-align: center;
     }
 
-    /* ACTIVE */
     .mobile-bottom-nav__item--active .mobile-bottom-nav__icon-bg {
         border-radius: 10px;
         display: flex;
@@ -983,8 +969,10 @@ main{
         justify-content: center;
         width: 74px;
         /*height: 60px;*/
-        margin-bottom: 4px;
+        /*margin-bottom: 4px;*/
+        fill:yellow;
     }
+
     .mobile-bottom-nav__item--active .mobile-bottom-nav__icon {
         filter: brightness(1.5) drop-shadow(0 0 0 #E5FF3A);
         background-color: #3A3451;
@@ -995,19 +983,6 @@ main{
         color: #E5FF3A;
         font-weight: 700;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     .mobile-bottom-nav__item--active .mobile-bottom-nav__label,
     .mobile-bottom-nav__item.active .mobile-bottom-nav__label {
@@ -1025,9 +1000,11 @@ main{
         border-radius: 4px;
     }
 
+    .footer-top {
+        padding: 88px 102px 16px;
+    }
 }
 
-/* Скрыть на десктопе */
 @media (min-width: 992px) {
     .mobile-bottom-nav {
         display: none !important;
@@ -1049,6 +1026,7 @@ main{
     .promo-desc {
         display: none;
     }
+
 }
 
 @media (max-width: 825px) {
@@ -1066,6 +1044,9 @@ main{
         min-height: 315px;
     }
 
+    .footer-top {
+        padding: 88px 16px 16px;
+    }
 
 }
 
@@ -1075,7 +1056,6 @@ main{
     }
 }
 
-/* Мобильные устройства (до 576px) */
 @media (max-width: 576px) {
 
 

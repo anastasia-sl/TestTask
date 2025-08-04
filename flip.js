@@ -4,12 +4,26 @@ function isMobile() {
 
 document.querySelectorAll('.rate-card-flip').forEach(card => {
     if (isMobile()) {
-        card.addEventListener('click', function (e) {
-            e.stopPropagation();
-            document.querySelectorAll('.rate-card-flip.flipped').forEach(el => {
-                if (el !== card) el.classList.remove('flipped');
-            });
-            card.classList.toggle('flipped');
+        card.addEventListener('click', function(e) {
+            // Проверяем, был ли клик на перевернутой стороне карточки
+            const backSide = card.querySelector('.rate-card-back');
+            const isClickOnBack = backSide && backSide.contains(e.target);
+
+            // Если карточка уже перевернута и клик был на ней
+            if (card.classList.contains('flipped') && isClickOnBack) {
+                card.classList.remove('flipped');
+                e.stopPropagation();
+                return;
+            }
+
+            // Если клик был на лицевой стороне или вне карточки
+            if (!isClickOnBack) {
+                e.stopPropagation();
+                document.querySelectorAll('.rate-card-flip.flipped').forEach(el => {
+                    if (el !== card) el.classList.remove('flipped');
+                });
+                card.classList.toggle('flipped');
+            }
         });
     }
 });
@@ -39,3 +53,4 @@ document.querySelectorAll('.mobile-bottom-nav__item').forEach(function(item) {
         if (item.getAttribute('href') === '#') e.preventDefault();
     });
 });
+
