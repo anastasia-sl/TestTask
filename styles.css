@@ -1,8 +1,9 @@
 body {
     margin: 0;
-    background: #14151b;
+    background: #14141A;
     color: #fff;
     font-family: 'Sofia Sans Condensed', Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 html, body {
@@ -166,6 +167,33 @@ html, body {
     height: 20px;
 }
 
+.topbar__mobile-auth {
+    display: none;
+}
+
+.topbar__mobile-auth {
+    display: none;
+}
+
+.topbar__auth-btn {
+    border: none;
+    background: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: 'Sofia Sans', Arial, sans-serif;
+}
+
+.topbar__auth-btn--signup {
+    background: #E5FF3A;
+    color: #2A2E0A;
+    width: 95px;
+    height: 40px;
+}
+
 .promo-info{
     padding-left: 116px;
 }
@@ -190,7 +218,7 @@ html, body {
 .promo {
     background: url('assets/images/MainImage.png') no-repeat right center;
     background-size: cover;
-    min-height: 300px;
+    min-height: 242px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -206,7 +234,7 @@ html, body {
     margin: 34px 0;
 }
 
-main{
+main {
     padding: 20px 16px 104px 16px;
 }
 
@@ -408,18 +436,13 @@ main{
     box-shadow: 0 0 32px #0004;
 }
 
-
-
-
-
-
 .terms-section {
     position: relative;
-    width: 1142px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    max-width: 1142px;
 }
 
 .terms-bar-img {
@@ -430,10 +453,9 @@ main{
     user-select: none;
 }
 
-/* Стили для закрытого состояния */
 .terms-block {
     position: relative;
-    width: 1142px;
+    max-width: 1142px;
     display: flex;
     flex-direction: column;
     z-index: 2;
@@ -588,7 +610,7 @@ main{
 }
 
 .footer-top {
-    padding: 48px 48px 0 48px;
+    padding: 0 48px;
 }
 
 .footer-cols {
@@ -603,7 +625,7 @@ main{
 }
 
 .footer-col {
-    min-width: 155px;
+    /*min-width: 155px;*/
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
@@ -738,5 +760,98 @@ main{
 @media (hover: none) and (pointer: coarse) {
     .rate-card-flip {
         cursor: pointer;
+    }
+}
+
+@media (max-width: 1440px) {
+    .topbar__logo {
+        margin-right: 100px;
+    }
+    .topbar__right {
+        margin-left: 100px;
+    }
+    .topbar__nav {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .topbar__logo {
+        margin-right: 24px;
+    }
+    .topbar__right {
+        margin-left: 60px;
+    }
+    .topbar__nav {
+        gap: 20px;
+    }
+    .topbar__nav-link {
+        font-size: 13px;
+    }
+    .topbar__nav-link--promotions {
+        width: auto;
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .topbar__nav,
+    .topbar__right {
+        display: none;
+    }
+
+    .topbar__mobile-auth {
+        display: flex;
+        align-items: center;
+    }
+
+    .topbar__logo {
+        margin-right: auto;
+    }
+
+    .topbar{
+        background: #181921;
+    }
+
+    main{
+        padding:0 24px;
+    }
+
+    .promo{
+        background: url('assets/images/MainImage.png') no-repeat center;
+    }
+}
+
+@media (max-width: 768px) {
+    .promo-title {
+        font-size: 34px;
+    }
+
+    .promo-desc {
+        font-size: 10px;
+    }
+
+    .rates {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .topbar {
+        height: 56px;
+        padding: 0 12px;
+    }
+
+    .topbar__logo {
+        height: 14px;
+    }
+
+    .topbar__auth-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .promo{
+        display: none !important;
     }
 }
